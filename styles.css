@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Blue: hsl(223, 87%, 63%);
+    --Blue-a: hsla(223, 87%, 63%, 0.806);
+
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+body{
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 20px;
+}
+
+/* -----------> Container <----------- */
+.container{
+    margin: 82px 26px;
+    text-align: center;
+}
+
+/* -----------> Header <----------- */
+header img{
+    height: 16px;
+}
+/* -----------> Main <----------- */
+main{
+    margin-top: 34px;
+}
+main h1{
+    font-size: 1.1em;
+    font-weight: 300;
+    color: var(--Light-Red);
+}
+main .soon{
+    font-weight: 700;
+    color: black;
+}
+main .subscribe{
+    font-size: 0.6em;
+    font-weight: 300;
+    margin-top: 18px;
+}
+
+/* -----------> Main <----------- */
+    /* -----------> Formulario <----------- */
+main form{
+    margin-top: 32px;
+}
+main form .error{
+    font-style: italic;
+    font-size: 0.5em;
+    color: var(--Light-Red);
+    margin: 8px 0 14px;
+    display: none;
+}
+main form .success{
+    font-style: italic;
+    font-size: 0.5em;
+    margin: 8px 0 14px;
+    color: rgb(173, 141, 0);
+    display: none;
+}
+main form .success .check{
+    font-style: normal;
+}
+main form input{
+    height: 40px;
+    width: 280px;
+    border-radius: 25px;
+}
+main form input[type="email"]{
+    border: 1px solid var(--Pale-Blue);
+    color: black;
+    font-weight: 300;
+    padding-left: 32px;
+}
+main form input[type="email"]::placeholder{
+    color: var(--Gray);
+}
+main form input[type="email"]:focus{
+    outline: none;
+    border: 1px solid var(--Light-Red);
+    color: black;
+}
+main form input[type="submit"]{
+    background-color: var(--Blue);
+    color: white;
+    margin-top: 10px;
+}
+main form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--Blue-a);
+}
+
+/* -----------> Main <----------- */
+    /* -----------> Dashboard <----------- */
+main img{
+    width: 100%;
+    margin-top: 70px;
+}
+
+/* -----------> Social Nets <----------- */
+.socialNets{
+    margin: 120px auto 30px;
+    width: 126px;
+    display: flex;
+    justify-content: space-between;
+}
+.socialNets a{
+    font-size: 15px;
+    text-decoration: none;
+}
+.fa-brands{
+    width: 30px;
+    height: 30px;
+    color: var(--Blue);
+    border: 1px solid var(--Pale-Blue);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+.fa-brands:hover{
+    background-color: var(--Blue);
+    color: white;
+    border: none;
+}
+/* -----------> Footer <----------- */
+.reserved{
+    font-size: 0.54em;
+    margin-bottom: 60px;
+    color: var(--Gray);
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--Gray);
+
+}
+.attribution a {
+    color: var(--Blue);
+}
+.attribution a:hover{
+    color: var(--Very-Dark-Blue);
+}
+
+/* -----------> 768px <----------- */
+@media screen and (min-width:768px) {
+    /* -----------> Container <----------- */
+    .container{
+    margin: 90px 40px;
+    }
+    /* -----------> Header <----------- */
+    header img{
+        height: 26px;
+    }
+    /* -----------> Main <----------- */
+    main h1{
+        font-size: 1.6em;
+    }
+    main .subscribe{
+        font-size: 0.75em;
+        margin-top: 20px;
+    }
+    /* -----------> Main <----------- */
+        /* -----------> Formulario <----------- */
+    main form{
+        display: flex;
+        justify-content: center;
+    }
+    main form .error{
+        font-size: 0.55em;
+        text-align: left;
+        padding-left: 32px;
+        margin: 11px 0 0;
+    }
+    main form .success{
+        font-size: 0.55em;
+        text-align: left;
+        padding-left: 32px;
+        margin: 11px 0 0;
+    }
+    main form input{
+        height: 56px;
+        border-radius: 32px;
+    }
+    main form input[type="email"]{
+        width: 350px;
+        margin-right: 15px;
+       font-size: 0.727em;
+    }
+    main form input[type="submit"]{
+        width: 200px;
+        font-size: 0.77em;
+        margin-top: 0;
+    }
+}
+
+/* -----------> 1024px <----------- */
+@media screen and (min-width: 1024px) {
+    /* -----------> Main <----------- */
+    main h1{
+        font-size: 2em;
+        margin-top: 55px;
+    }
+    main .subscribe{
+        font-size: 0.88em;
+        margin-top: 23px;
+    }
+    /* -----------> Main <----------- */
+        /* -----------> Formulario <----------- */
+    main form{
+        margin-top: 40px;
+    }
+    main form input[type="email"]{
+        width: 420px;
+    }
+    /* -----------> Main <----------- */
+        /* -----------> Dashboard <----------- */
+    main img{
+        width: 640px;
+        margin-top: 85px;
+    }
+    /* -----------> Social Nets <----------- */
+    .socialNets{
+        margin: 73px auto 30px;
+    }
+}
